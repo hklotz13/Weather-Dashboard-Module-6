@@ -54,7 +54,6 @@ function getCurrentWeather(data) {
     $("#current-temp")[0].textContent = "Temperature: " + data.current.temp.toFixed(1);
     $("#current-humidity")[0].textContent = "Humidity: " + data.current.humidity + "% ";
     $("#current-windspeed")[0].textContent = "Wind Speed: " + data.current.wind_speed.toFixed(1) + " MPH";
-    $("#uv-index")[0].textContent = "  " + data.current.uvi;
     futureWeather(data);
     console.log(data);
 };
