@@ -84,7 +84,7 @@ function convertUnixTime(data, index) {
     const dateObject = new Date(data.daily[index + 1].dt * 1000);
 
     return (dateObject.toLocaleDateString());
-}
+};
 
 $("#search-button").on("click", function (event) {
     event.preventDefault();
