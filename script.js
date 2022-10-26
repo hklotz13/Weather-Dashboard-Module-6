@@ -56,6 +56,7 @@ function getCurrentWeather(data) {
     $("#current-windspeed")[0].textContent = "Wind Speed: " + data.current.wind_speed.toFixed(1) + " MPH";
     $("#uv-index")[0].textContent = "  " + data.current.uvi;
     futureWeather(data);
+    console.log(data);
 };
 
 //displays five day forecast data
@@ -77,7 +78,7 @@ function futureWeather(data) {
         currentSelector = "#hum-" + i;
         $(currentSelector)[0].textContent = "Humidity: " + futureWeather.humidity + "%";
     }
-}
+};
 
 // converts unix time from server
 function convertUnixTime(data, index) {
