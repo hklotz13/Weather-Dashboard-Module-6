@@ -73,7 +73,7 @@ function futureWeather(data) {
         currentSelector = "#img-" + i;
         $(currentSelector)[0].src = futureWeather.icon;
         currentSelector = "#temp-" + i;
-        $(currentSelector)[0].textContent = "Temp: " + futureWeather.temp + " \u2109";
+        $(currentSelector)[0].textContent = "Temp: " + futureWeather.temp;
         currentSelector = "#hum-" + i;
         $(currentSelector)[0].textContent = "Humidity: " + futureWeather.humidity + "%";
     }
@@ -89,7 +89,6 @@ function convertUnixTime(data, index) {
 $("#search-button").on("click", function (event) {
     event.preventDefault();
     findCity();
-    $("form")[0].reset();
 });
 
 $(".search-history-list").on("click", "#search-city", function () {
